@@ -31,3 +31,12 @@ Route::post('/submit', function (Request $request) {
  
     return redirect('/');
 });
+
+
+// hien thi ra view thong qua controller
+Route::get('/news', 'NewsController@index');
+
+// hien thi ra view voi gia tri lay tu routing
+Route::get('/about', function () {
+    return view('about', ['name' => 'Học Web Chuẩn']);
+});
